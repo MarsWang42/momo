@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="marswang92@gmail.com">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Momo - A Trello clone on Phoenix and Ant Design</title>
+    <link rel="stylesheet" href="<%= static_path(@conn, "/css/application.css") %>">
+  </head>
+
+  <body>
+    <main id="app-container" role="main"></main>
+    <footer>&copy; 2017 Mars Wang</footer>
+    <script src="<%= static_path(@conn, "/js/application.js") %>"></script>
+  </body>
+</html>

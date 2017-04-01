@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ */
+@import url('https://fonts.googleapis.com/css?family=Unica+One');
+@import "./antd.min.css";
+@import "./react_app.scss";
+@import "./board.scss";
+@import "./list.scss";
+@import "./navbar.scss";
+@import "./sidebar.scss";
+@import "./spinner.scss";
+@import "./task.scss";
+
+html,body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+}
+
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 10px;
+  text-align: center;
+}
+.welcome-container {
+  font-family: 'Unica One', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 23px;
+  }
+  .gh-btn {
+    margin-left: 10px;
+    background-color: #eee;
+    background-image: linear-gradient(to bottom,#fcfcfc 0,#ffd5d5 100%);
+    background-repeat: no-repeat;
+    border: 1px solid #d5d5d5;
+    padding: 2px 5px 2px 4px;
+    color: #333;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    white-space: nowrap;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  .gh-ico {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url('/images/github.svg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .welcome-logo-icon {
+    height: 300px;
+    width: 300px;
+  }
+}
+
+.red-gradient-background {
+  background: linear-gradient(to bottom, #ffa8a8, rgba(16, 142, 233, 0.2));
+}
+
+.body-background {
+  background: #f8fcff;
+}

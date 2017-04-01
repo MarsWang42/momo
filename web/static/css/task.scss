@@ -1,0 +1,136 @@
+.new-task-form {
+  border: 1px solid #9c9c9c;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+}
+
+.task-button {
+  width: 100%;
+  margin: 3px 0;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+.create-task-button {
+  width: 100%;
+  margin-top: 8px;
+}
+
+.new-task-form-button {
+  width: 100%;
+}
+
+.task-detail-title {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+.task-detail-container {
+  padding: 15px;
+}
+
+.task-detail-row {
+  font-size: 14px;
+  padding: 5px;
+}
+
+.task-detail-row.title-container {
+  margin: 0 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  box-shadow: 0 2px 0px 0px rgba(0, 0, 0, 0.16);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  .task-title-text {
+    margin: 0 5px;
+    border-radius: 5px;
+    padding: 0 5px;
+    cursor: pointer;
+    height: 30px;
+  }
+  .task-title-text:hover {
+    background-color: #e3e3e3;
+  }
+  .task-title-form {
+    max-width: 300px;
+    height: 30px;
+    font-size: 20px;
+  }
+}
+
+.task-detail-row.description-container {
+  padding: 0;
+  .description-text {
+    margin: 0 0 10px 20px;
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    padding: 5px 5px 5px 15px;
+    cursor: pointer;
+    min-height: 20px;
+  }
+  .description-text:hover {
+    background-color: #e3e3e3;
+  }
+  .description-form {
+    margin: 0 0 10px 20px;
+  }
+}
+
+.task-action-container {
+  text-align: center;
+  padding: 15px;
+  .action-button {
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+}
+
+.task-list-enter {
+  opacity: 0;
+}
+
+.task-list-enter.task-list-enter-active {
+  animation:
+    openspace .3s ease forwards,
+    restored-item-animation .3s .3s cubic-bezier(0,.8,.32,1.07) forwards;
+}
+
+@keyframes openspace {
+  to {
+    height: auto;
+  }
+}
+
+@keyframes restored-item-animation {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.task-list-leave {
+}
+
+.task-list-leave.task-list-leave-active {
+  animation: removed-item-animation .6s cubic-bezier(.55,-0.04,.91,.94) forwards;
+}
+
+@keyframes removed-item-animation {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}

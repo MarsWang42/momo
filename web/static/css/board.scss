@@ -1,0 +1,50 @@
+.board-list-container {
+  margin: 20px;
+}
+.board-detail-container {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.board-detail-title {
+  padding: 15px 25px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: center;
+  i {
+    font-size: 25px;
+    margin-right: 8px;
+  }
+}
+.board-detail-wrapper {
+  position: relative;
+}
+.list-index-enter {
+  opacity: 0.01;
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+}
+.list-index-enter.list-index-enter-active {
+  -webkit-transform: translate(0, 0%);
+      -ms-transform: translate(0, 0%);
+          transform: translate(0, 0%);
+  opacity: 1;
+  transition: opacity 500ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 500ms;
+  transition: transform 500ms, opacity 500ms, -webkit-transform 500ms;
+}
+.list-index-leave {
+  opacity: 1;
+  -webkit-transform: translate(0, 0%);
+      -ms-transform: translate(0, 0%);
+          transform: translate(0, 0%);
+}
+.list-index-leave.list-index-leave-active {
+  opacity: 0.01;
+  -webkit-transform: translate(0, -100%);
+      -ms-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  transition: opacity 500ms, -webkit-transform 500ms;
+  transition: transform 500ms, opacity 500ms;
+  transition: transform 500ms, opacity 500ms, -webkit-transform 500ms;
+}

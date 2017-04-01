@@ -1,0 +1,59 @@
+.new-list-form {
+  border: 1px solid #9c9c9c;
+  border-radius: 4px;
+  padding: 10px 20px;
+  background-color: #f1f1f1;
+}
+
+.new-list-form-button {
+  width: 100%;
+}
+.archive-list-button {
+  font-size: 15px;
+  margin-top: 3px;
+  cursor: pointer;
+}
+.archive-list-button:hover {
+  color: blue;
+}
+.list-card {
+  margin: 10px;
+  width: 250px;
+  display: inline-block;
+  vertical-align: top;
+  background-color: #fbfbfb;
+  .ant-card-head {
+    height: 100%;
+    line-height: 20px;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 10px 24px;
+    .list-card-title {
+      display: flex;
+      display: -webkit-flex;
+      align-items: center;
+      overflow-wrap: break-word;
+      i {
+        display: block;
+        font-size: 20px;
+        margin-right: 8px;
+        padding-top: 2px;
+      }
+      .list-card-title-text {
+        display: block;
+        white-space: normal;
+        border-radius: 5px;
+        padding: 5px;
+        cursor: pointer;
+        width: 140px;
+      }
+      .list-card-title-text:hover {
+        background-color: #e3e3e3;
+      }
+      .list-card-title-form {
+        width: 140px;
+        font-size: 14px;
+        height: 30px;
+      }
+    }
+  }
+}

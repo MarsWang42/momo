@@ -1,0 +1,38 @@
+.ant-menu-submenu.float-right {
+  float: right;
+}
+.ant-menu-item.float-right {
+  float:right;
+}
+.login-form-forgot {
+  float: right;
+}
+.login-form-button {
+  width: 100%;
+}
+.register-form-button {
+  width: 100%;
+}
+.navbar {
+  list-style-type: none;
+  height: 50px;
+  background: linear-gradient(to bottom,#ffc581 0,#ea5dcc 100%);
+  -moz-box-shadow: 0 4px 3px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 4px 3px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: 0 4px 3px 0px rgba(0, 0, 0, 0.16);
+  a.navbar-logo {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+
+    .navbar-logo-icon {
+      height: 30px;
+      width: 30px;
+    }
+    h2 {
+      font-family: 'Unica One', sans-serif;
+      display: inline-block;
+      padding: 0 15px;
+    }
+  }
+}
