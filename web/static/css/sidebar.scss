@@ -4,9 +4,7 @@
   top: 0;
   right: 0;
   overflow: auto;
-  background: -moz-linear-gradient(top, #fffbe6, #9fdcf9);
-  background: -webkit-gradient(linear, 0 0, 0 bottom, from(#fffbe6), to(#9fdcf9));
-  background: -o-linear-gradient(top, #fffbe6, #9fdcf9);
+  background: linear-gradient(to bottom, #fffbe6, #9fdcf9);
   box-shadow: -4px 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 .sidebar-title-row {

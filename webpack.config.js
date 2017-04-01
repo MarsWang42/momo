@@ -30,11 +30,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx', '.scss'],
   },
-  plugins: [
-    new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
-    new UglifyJSPlugin(),
-    new ExtractTextPlugin('css/application.css'),
-  ],
+
   module: {
     rules: [
       {
@@ -65,7 +61,17 @@ const config = {
           fallback: 'style-loader',
           loader: [
               { loader: 'css-loader', options: { url: false, minimize: true } },
-              { loader: 'postcss-loader' },
+              { loader: 'postcss-loader',
+                options: {
+                  plugins: function () {
+                    return [
+                      require('postcss-cssnext')({
+                        browsers: ['last 2 versions', '> 5%'],
+                      })
+                    ];
+                  }
+                }
+            },
           ]
         })
       },
@@ -74,14 +80,30 @@ const config = {
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           loader: [
-              { loader: 'css-loader', options: { url: false, minimize: true } },
-              { loader: 'postcss-loader' },
-              { loader: 'sass-loader', options: {} }
+            { loader: 'css-loader', options: { url: false, minimize: true } },
+            { loader: 'postcss-loader',
+              options: {
+                plugins: function () {
+                  return [
+                    require('postcss-cssnext')({
+                      browsers: ['last 2 versions', '> 5%'],
+                    })
+                  ];
+                }
+              }
+            },
+            { loader: 'sass-loader', options: {} }
           ]
         })
       },
     ],
   },
+
+  plugins: [
+    new webpack.EnvironmentPlugin({ NODE_ENV: 'development' }),
+    new UglifyJSPlugin(),
+    new ExtractTextPlugin('css/application.css'),
+  ],
 };
 
 module.exports = config;
